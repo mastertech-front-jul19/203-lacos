@@ -19,17 +19,37 @@
 //     alert('Os números são iguais.');
 // }
 
+// let i = 0;
+// let numeroNovo = Number(prompt(`Diga o ${i+1}º número:`));
+// let maior = numeroNovo;
+// let total = Number(prompt('Quantos números você quer comparar?'));
+// while (i < total) {
+//     if (numeroNovo > maior) {
+//         maior = numeroNovo;
+//     }
+
+//     numeroNovo = Number(prompt(`Diga o ${i+1}º número:`))
+
+//     i++;
+// }
+
+// alert(`O maior número digitado foi ${maior}.`);
+
 let i = 0;
-let numeroNovo = Number(prompt(`Diga o ${i+1}º número:`));
-let maior = numeroNovo;
+let numeros = [];
+let total = Number(prompt('Quantos números você quer comparar?'));
+while(i < total) {
+    numeros.push(Number(prompt(`Diga o ${i+1} número:`)));
+    i++;
+}
 
-while (i < Number(prompt('Quantos números você quer comparar?'))) {
-    if (numeroNovo > maior) {
-        maior = numeroNovo;
+i = 0;
+let maior = numeros[0];
+while(i < numeros.length) {
+    let numero = numeros[i];
+    if (numero > maior) {
+        maior= numero;
     }
-
-    numeroNovo = Number(prompt(`Diga o ${i+1}º número:`))
-
     i++;
 }
 
